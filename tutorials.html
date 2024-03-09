@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Learning | Webstrix - Tutorials</title>
+  <link rel="icon" href="c:\Users\ADMIN\Downloads\favicon (1).ico" type="image/x-icon"> 
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #faf5ff; /* Light purple */
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #ffffff; /* White */
+      z-index: 99;
+    }
+
+    .nav__content {
+      max-width: 1200px; /* Adjusted max-width */
+      margin: auto;
+      padding: 1.5rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo a {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #a855f7; /* Primary color */
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .logo a:hover {
+      color: #9333ea; /* Darker shade of primary color */
+    }
+
+    .checkbox {
+      display: none;
+    }
+
+    input {
+      display: none;
+    }
+    .checkbox i {
+      font-size: 2rem;
+      color: #a855f7; /* Primary color */
+      cursor: pointer;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      list-style: none;
+      transition: left 0.3s;
+    }
+
+    ul li a {
+      padding: 0.5rem 1rem;
+      border: 2px solid transparent;
+      text-decoration: none;
+      font-weight: 600;
+      color: #1f2937; /* Dark text */
+      transition: 0.3s;
+    }
+
+    ul li a:hover {
+      border-top-color: #ca8a04; /* Secondary color */
+      border-bottom-color: #ca8a04; /* Secondary color */
+      color: #ca8a04; /* Secondary color */
+    }
+
+    /* Dropdown menu styles */
+    .dropdown {
+      display: none;
+      position: absolute;
+      background-color: #ffffff; /* White */
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown li {
+      display: block;
+    }
+
+    .dropdown li a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #1f2937; /* Dark text */
+    }
+
+    .dropdown li a:hover {
+      background-color: #f9f9f9; /* Light gray */
+    }
+
+    /* Display dropdown on hover */
+    li:hover .dropdown {
+      display: block;
+    }
+
+    /* End of Dropdown menu styles */
+
+    .section {
+      background-color: #faf5ff; /* Light purple */
+      padding-top: 5rem; /* Adjusted padding */
+    }
+
+    .section__container {
+      max-width: 1200px; /* Adjusted max-width */
+      margin: auto;
+      padding: 2rem 1rem; /* Increased padding */
+      display: grid;
+      gap: 2rem;
+    }
+
+    .content {
+      text-align: center; /* Center align content */
+    }
+
+    .content .title {
+      margin-bottom: 2rem; /* Increased margin bottom */
+      font-size: 2rem; /* Adjusted font size */
+      color: #1f2937; /* Dark text */
+    }
+
+    .image {
+      text-align: center; /* Center align image content */
+    }
+
+    .image h2 {
+      margin-bottom: 2rem; /* Increased margin bottom */
+      font-size: 1.5rem; /* Adjusted font size */
+      color: #1f2937; /* Dark text */
+    }
+
+    .image ul {
+      list-style: none; /* Remove default list style */
+      padding: 0;
+    }
+
+    .image ul li {
+      margin-bottom: 2rem; /* Increased margin bottom */
+    }
+
+    .image ul li h3 {
+      margin-bottom: 0.5rem; /* Adjusted margin bottom */
+      font-size: 1.2rem; /* Adjusted font size */
+      color: #1f2937; /* Dark text */
+    }
+
+    .image ul li p {
+      margin-bottom: 1rem; /* Adjusted margin bottom */
+      color: #6b7280; /* Lighter text */
+    }
+
+    .image ul li a {
+      color: #a855f7; /* Primary color */
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .image ul li a:hover {
+      color: #9333ea; /* Darker shade of primary color */
+    }
+
+    .footer {
+      background-color: #1f2937; /* Dark blue */
+      color: #ffffff; /* White */
+      padding: 2rem 0;
+      text-align: center;
+      display: flex;
+      justify-content: flex-end; /* Align icons to the right */
+      align-items: center;
+    }
+
+    .footer a {
+      color: #ffffff; /* White */
+      margin: 0 1rem;
+      font-size: 1.5rem; /* Adjusted font size */
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav__content">
+      <div class="logo"><a href="#">Webstrix</a></div>
+      <label for="check" class="checkbox">
+        <i class="ri-menu-line"></i>
+      </label>
+      <input type="checkbox" name="check" id="check">
+      <ul>
+        <li><a href="about.html" target="_blank">About</a></li>
+        <li>
+          <a href="#">Resources</a>
+          <ul class="dropdown">
+            <li><a href="tutorials.html" target="_blank">Tutorials</a></li>
+            <li><a href="docs.html" target="_blank">Documents</a></li>
+            <li><a href="enote.html" target="_blank">E-Notes</a></li>          </ul>
+        </li>
+        <li><a href="community and forums.html" target="_blank">Community or Forums</a></li>
+        <li><a href="chatbot.html" target="_blank">Chatbot</a></li>
+        <li><a href="contact.html" target="_blank">Contact</a></li>
+        <li>
+          <a href="#">Sign In/Sign Up</a>
+          <ul class="dropdown">
+            <li><a href="login.html" target="_blank">login</a></li>
+            <li><a href="signup.html" target="_blank">Sign Up</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <section class="section">
+    <div class="section__container">
+      <div class="content">
+        <p class="subtitle">TUTORIALS</p>
+        <h1 class="title">Explore Our Tutorials</h1>
+        <p class="description">
+          Whether you're a beginner or an experienced developer, our tutorials cover a wide range of topics to help you improve your skills and stay updated with the latest technologies. Dive into our collection of tutorials and start learning today!
+        </p>
+      </div>
+      <div class="image">
+        <h2>Featured Tutorials</h2>
+        <ul>
+          <li>
+            <h3>Tutorial FSD</h3>
+            <p>Description of FSD</p>
+            <a href="https://www.youtube.com/@freecodecamp">Read More</a>
+          </li>
+          <li>
+            <h3>Tutorial ATT</h3>
+            <p>Description of Selenium</p>
+            <a href="https://www.youtube.com/@softwaretestingmentor">Read More</a>
+          </li>
+          <li>
+            <h3>Tutorial RTSP</h3>
+            <p>Description of Project</p>
+            <a href="https://www.youtube.com/@programmingwithmosh">Read More</a>
+          </li>
+          <li>
+            <h3>Tutorial NJS</h3>
+            <p>Description of Node.js</p>
+            <a href="https://www.youtube.com/@NetNinja">Read More</a>
+          </li>
+          <li>
+            <h3>Tutorial RJS</h3>
+            <p>Description of React.js</p>
+            <a href="https://www.youtube.com/@academind">Read More</a>
+          </li>
+          <li>
+            <h3>Tutorial HTML</h3>
+            <p>Description of HTML</p>
+            <a href="https://www.youtube.com/@TraversyMedia">Read More</a>
+          </li>
+          <li>
+            <h3>Tutorial CNOS</h3>
+            <p>Description of CN&OS</p>
+            <a href="https://www.youtube.com/@ravindrababu_ravula">Read More</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="social-icons">
+        <a href="https://www.reddit.com/r/webstrixx_/s/3vYysc03ef"><i class="ri-reddit-fill"></i></a>
+        <a href="https://discord.gg/gqKC8Shq"><i class="ri-discord-fill"></i></a>
+        <a href="https://github.com/webstrixx?tab=repositories"><i class="ri-github-fill"></i></a>
+      <!-- Add more social media icons as needed -->
+    </div>
+  </footer>
+</body>
+</html>
